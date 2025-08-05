@@ -23,9 +23,12 @@
 
 #include "cmsis_os2.h"                  // ::CMSIS:RTOS2
 #include "cmsis_vio.h"
+#include "stm32f429i_discovery_sdram.h"
 
 static osThreadId_t tid_thrLED;         // Thread id of thread: LED
 static osThreadId_t tid_thrButton;      // Thread id of thread: Button
+
+extern int Init_GUIThread (void);
 
 /*-----------------------------------------------------------------------------
   thrLED: blink LED
@@ -98,6 +101,8 @@ __NO_RETURN void app_main_thread (void *argument) {
 int app_main (void) {
   osKernelInitialize();                         /* Initialize CMSIS-RTOS2 */
   osThreadNew(app_main_thread, NULL, NULL);
+	BSP_SDRAM_Init();
+	Init_GUIThread ();
   osKernelStart();                              /* Start thread execution */
   return 0;
 }

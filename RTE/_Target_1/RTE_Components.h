@@ -50,6 +50,8 @@
 /* Keil::Device:CubeMX@1.0.0 */
 #define RTE_DEVICE_CUBE_MX
 #define CMSIS_device_header "stm32f4xx.h"
+/* Segger::Graphics&MDK-Pro:CORE@6.32.3 */
+#define RTE_Graphics_Core               /* Graphics Core */
 
 
 #endif /* RTE_COMPONENTS_H */
