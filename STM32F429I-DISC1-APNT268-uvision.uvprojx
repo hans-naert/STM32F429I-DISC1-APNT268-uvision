@@ -465,6 +465,11 @@
               <FileType>1</FileType>
               <FilePath>.\GUI_SingleThread.c</FilePath>
             </File>
+            <File>
+              <FileName>LogViewerDLG.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LogViewerDLG.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -873,6 +878,12 @@
           <targetInfo name="Target_1"/>
         </targetInfos>
       </component>
+      <component Cbundle="MDK-Pro" Cclass="Graphics" Cgroup="Tools" Csub="GUI Builder" Cvendor="Segger" Cversion="6.32.3" condition="Graphics Core">
+        <package name="MDK-Middleware_Graphics" schemaVersion="1.7.28" url="https://www.keil.com/pack/" vendor="Keil" version="1.3.1"/>
+        <targetInfos>
+          <targetInfo name="Target_1"/>
+        </targetInfos>
+      </component>
     </components>
     <files>
       <file attr="config" category="source" name="Config\RTX_Config.c" version="5.2.0">
@@ -887,6 +898,14 @@
         <instance index="0">RTE\CMSIS\RTX_Config.h</instance>
         <component Capiversion="2.3.0" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Source" Cvendor="ARM" Cversion="5.9.0" condition="RTX5"/>
         <package name="CMSIS-RTX" schemaVersion="1.7.36" url="https://www.keil.com/pack/" vendor="ARM" version="5.9.0"/>
+        <targetInfos>
+          <targetInfo name="Target_1"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="doc" name="emWin\Tool\GUIBuilder.txt" version="1.0.0">
+        <instance index="0">RTE\Graphics\GUIBuilder.txt</instance>
+        <component Cbundle="MDK-Pro" Cclass="Graphics" Cgroup="Tools" Csub="GUI Builder" Cvendor="Segger" Cversion="6.32.3" condition="Graphics Core"/>
+        <package name="MDK-Middleware_Graphics" schemaVersion="1.7.28" url="https://www.keil.com/pack/" vendor="Keil" version="1.3.1"/>
         <targetInfos>
           <targetInfo name="Target_1"/>
         </targetInfos>
