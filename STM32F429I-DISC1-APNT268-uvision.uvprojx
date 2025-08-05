@@ -465,11 +465,6 @@
               <FileType>1</FileType>
               <FilePath>.\GUI_SingleThread.c</FilePath>
             </File>
-            <File>
-              <FileName>stm32f429i_discovery_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32f429i_discovery_sdram.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

@@ -121,3 +121,9 @@ build-gen:
           category: sourceC
         - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/ili9341/ili9341.c
           category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/stm32f429i_discovery.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/LCD_X.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/GUI_SingleThread.c
+          category: sourceC
