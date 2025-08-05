@@ -9,7 +9,8 @@ build-gen:
     endian: little
     fpu: sp
   add-path:
-    - D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/ili9341
+    - D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision
+    - D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/ili9341
   components:
     - component: ARM::CMSIS-Compiler:CORE@1.1.0
       from-pack: ARM::CMSIS-Compiler@2.1.0
@@ -60,14 +61,19 @@ build-gen:
           category: sourceC
         - file: C:/Users/u0081767/AppData/Local/Arm/Packs/ARM/CMSIS-RTX/5.9.0/Source/rtx_timer.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/RTE/CMSIS/RTX_Config.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/CMSIS/RTX_Config.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/RTE/CMSIS/RTX_Config.h
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/CMSIS/RTX_Config.h
           category: header
     - component: Keil::CMSIS Driver:GPIO@1.2.0
       from-pack: ARM::CMSIS-Driver_STM32@1.2.0
       files:
         - file: C:/Users/u0081767/AppData/Local/Arm/Packs/ARM/CMSIS-Driver_STM32/1.2.0/Drivers/GPIO_STM32.c
+          category: sourceC
+    - component: Keil::CMSIS Driver:I2C@3.0.0
+      from-pack: ARM::CMSIS-Driver_STM32@1.2.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/ARM/CMSIS-Driver_STM32/1.2.0/Drivers/I2C_STM32.c
           category: sourceC
     - component: Keil::CMSIS Driver:USART@3.0.0
       from-pack: ARM::CMSIS-Driver_STM32@1.2.0
@@ -88,15 +94,27 @@ build-gen:
           category: library
         - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware_Graphics/1.3.1/emWin/Sample/GUI_X/GUI_X_RTE.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/RTE/Graphics/GUIConf.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/Graphics/GUIConf.c
           category: sourceC
     - component: Segger::Graphics&MDK-Pro:Display:Interface Template@6.32.3
       from-pack: Keil::MDK-Middleware_Graphics@1.3.1
       files:
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/RTE/Graphics/LCDConf.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/Graphics/LCDConf.c
           category: sourceC
+    - component: Segger::Graphics&MDK-Pro:Input Device:Touchscreen@6.32.3
+      from-pack: Keil::MDK-Middleware_Graphics@1.3.1
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware_Graphics/1.3.1/emWin/Sample/GUI_X/GUI_X_Touch.c
+          category: sourceC
+    - component: Segger::Graphics&MDK-Pro:Tools:GUI Builder@6.32.3
+      from-pack: Keil::MDK-Middleware_Graphics@1.3.1
+      files:
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/Graphics/GUIBuilder.txt
+          category: doc
   apis:
     - api: CMSIS Driver:GPIO(API)@1.0.0
+      from-pack: ARM::CMSIS@6.2.0
+    - api: CMSIS Driver:I2C(API)@2.4.0
       from-pack: ARM::CMSIS@6.2.0
     - api: CMSIS Driver:USART(API)@2.4.0
       from-pack: ARM::CMSIS@6.2.0
@@ -115,15 +133,19 @@ build-gen:
   groups:
     - group: Source Group 1
       files:
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/retarget_stdio.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/retarget_stdio.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/Blinky.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/Blinky.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/ili9341/ili9341.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/ili9341/ili9341.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/stm32f429i_discovery.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/stm32f429i_discovery.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/LCD_X.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/LCD_X.c
           category: sourceC
-        - file: D:/cursussen/IoT-Systems/voorbereiding/20250805/STM32F429I-DISC1-APNT268-uvision/GUI_SingleThread.c
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/GUI_SingleThread.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/LogViewerDLG.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/Touch_STMPE811.c
           category: sourceC

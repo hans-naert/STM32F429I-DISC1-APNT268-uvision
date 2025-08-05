@@ -222,7 +222,7 @@
 //   <i> Initializes thread stack with watermark pattern for analyzing stack usage.
 //   <i> Enabling this option increases significantly the execution time of thread creation.
 #ifndef OS_STACK_WATERMARK
-#define OS_STACK_WATERMARK          0
+#define OS_STACK_WATERMARK          1
 #endif
  
 //   <o>Default Processor mode for Thread execution
@@ -269,7 +269,7 @@
 //   <i> May be set to 0 when timers are not used.
 //   <i> Default: 512
 #ifndef OS_TIMER_THREAD_STACK_SIZE
-#define OS_TIMER_THREAD_STACK_SIZE  512
+#define OS_TIMER_THREAD_STACK_SIZE  3072
 #endif
  
 //   <o>Timer Thread TrustZone Module Identifier

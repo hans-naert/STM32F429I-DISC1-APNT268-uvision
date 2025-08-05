@@ -1,6 +1,6 @@
 /******************************************************************************
  * File Name   : MX_Device.h
- * Date        : 05/08/2025 16:35:53
+ * Date        : 06/08/2025 14:37:49
  * Description : STM32Cube MX parameter definitions
  * Note        : This file is generated with a generator out of the
  *               STM32CubeMX project and its generated files (DO NOT EDIT!)
@@ -20,6 +20,9 @@
 #define MX_I2C3_ANF_ENABLE                      1
 #define MX_I2C3_DNF                             0
 
+/* Peripheral Clock Frequency */
+#define MX_I2C3_PERIPH_CLOCK_FREQ               42000000
+
 /* Pins */
 
 /* I2C3_SCL */
@@ -27,8 +30,8 @@
 #define MX_I2C3_SCL_GPIO_Pin                    GPIO_PIN_8
 #define MX_I2C3_SCL_GPIOx                       GPIOA
 #define MX_I2C3_SCL_GPIO_Mode                   GPIO_MODE_AF_OD
-#define MX_I2C3_SCL_GPIO_PuPd                   GPIO_PULLUP
-#define MX_I2C3_SCL_GPIO_Speed                  GPIO_SPEED_FREQ_LOW
+#define MX_I2C3_SCL_GPIO_PuPd                   GPIO_NOPULL
+#define MX_I2C3_SCL_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_I2C3_SCL_GPIO_AF                     GPIO_AF4_I2C3
 
 /* I2C3_SDA */
@@ -36,15 +39,15 @@
 #define MX_I2C3_SDA_GPIO_Pin                    GPIO_PIN_9
 #define MX_I2C3_SDA_GPIOx                       GPIOC
 #define MX_I2C3_SDA_GPIO_Mode                   GPIO_MODE_AF_OD
-#define MX_I2C3_SDA_GPIO_PuPd                   GPIO_PULLUP
-#define MX_I2C3_SDA_GPIO_Speed                  GPIO_SPEED_FREQ_LOW
+#define MX_I2C3_SDA_GPIO_PuPd                   GPIO_NOPULL
+#define MX_I2C3_SDA_GPIO_Speed                  GPIO_SPEED_FREQ_HIGH
 #define MX_I2C3_SDA_GPIO_AF                     GPIO_AF4_I2C3
 
 /*------------------------------ SPI5           -----------------------------*/
 #define MX_SPI5                                 1
 
 /* Peripheral Clock Frequency */
-#define MX_SPI5_PERIPH_CLOCK_FREQ               72000000
+#define MX_SPI5_PERIPH_CLOCK_FREQ               84000000
 
 /* Pins */
 

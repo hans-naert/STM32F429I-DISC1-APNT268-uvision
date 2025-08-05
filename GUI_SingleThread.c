@@ -7,7 +7,7 @@ extern WM_HWIN CreateLogViewer(void);
 /*----------------------------------------------------------------------------
  *      GUIThread: GUI Thread for Single-Task Execution Model
  *---------------------------------------------------------------------------*/
-#define GUI_THREAD_STK_SZ    (2048U)
+#define GUI_THREAD_STK_SZ    (4096U)
 
 static void         GUIThread (void *argument);         /* thread function */
 static osThreadId_t GUIThread_tid;                      /* thread id */
@@ -41,7 +41,7 @@ __NO_RETURN static void GUIThread (void *argument) {
   while (1) {
     
     /* All GUI related activities might only be called from here */
-
+		GUI_TOUCH_Exec();
     GUI_Exec();         /* Execute all GUI jobs ... Return 0 if nothing was done. */
     GUI_X_ExecIdle();   /* Nothing left to do for the moment ... Idle processing */
   }
