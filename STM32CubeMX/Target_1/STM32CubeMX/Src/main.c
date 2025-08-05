@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "cmsis_vio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -118,6 +118,13 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  
+  stdio_init();                         /* Initialize STDIO */
+
+  vioInit();                            /* Initialize Virtual I/O */
+
+  app_main();                           /* Execute Application main */
+
 
   /* USER CODE END 2 */
 
