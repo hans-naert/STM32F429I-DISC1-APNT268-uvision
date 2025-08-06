@@ -19,6 +19,7 @@
 */
 
 // USER START (Optionally insert additional includes)
+#include <string.h>
 // USER END
 
 #include "DIALOG.h"
@@ -35,6 +36,7 @@
 
 
 // USER START (Optionally insert additional defines)
+extern char fbuf[200];
 // USER END
 
 /*********************************************************************
@@ -116,6 +118,8 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
       switch(NCode) {
       case WM_NOTIFICATION_CLICKED:
         // USER START (Optionally insert code for reacting on notification message)
+				hItem = WM_GetDialogItem(pMsg->hWin, ID_MULTIEDIT_0);
+				MULTIEDIT_SetText(hItem, fbuf);
         // USER END
         break;
       case WM_NOTIFICATION_RELEASED:

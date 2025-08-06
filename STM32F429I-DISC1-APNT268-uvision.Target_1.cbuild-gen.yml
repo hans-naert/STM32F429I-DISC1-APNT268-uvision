@@ -80,13 +80,92 @@ build-gen:
       files:
         - file: C:/Users/u0081767/AppData/Local/Arm/Packs/ARM/CMSIS-Driver_STM32/1.2.0/Drivers/USART_STM32.c
           category: sourceC
+    - component: Keil::CMSIS Driver:USB Host@2.1.0
+      from-pack: ARM::CMSIS-Driver_STM32@1.2.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/ARM/CMSIS-Driver_STM32/1.2.0/Drivers/USBH_STM32.c
+          category: sourceC
     - component: Keil::CMSIS Driver:VIO:Board@1.0.0
       from-pack: Keil::STM32F429I-DISC1_BSP@1.0.0
       files:
         - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/STM32F429I-DISC1_BSP/1.0.0/CMSIS/Driver/vio_STM32F429I-DISC1.c
           category: sourceC
+    - component: Keil::CMSIS-Compiler:File Interface:MDK-MW File System@1.0.1
+      from-pack: Keil::MDK-Middleware@8.1.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Interface/retarget_mdk-fs.c
+          category: sourceC
     - component: Keil::Device:CubeMX@1.0.0
       from-pack: Keil::STM32F4xx_DFP@3.1.0
+    - component: Keil::File System&MDK:CORE@8.0.2
+      from-pack: Keil::MDK-Middleware@8.1.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_common.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_config.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_debug.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_efs.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_fat.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_fat_elink.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_ioc.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_journal.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_mapi.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_os_rtos2.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_sys.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_time.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_version.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/File_System/FS_Config.h
+          category: header
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/File_System/FS_Debug.h
+          category: header
+    - component: Keil::File System&MDK:Drive:USB@8.0.2
+      from-pack: Keil::MDK-Middleware@8.1.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/FileSystem/Source/fs_usbh_msc.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/File_System/FS_Config_USB_0.h
+          category: header
+    - component: Keil::USB&MDK:CORE@8.0.0
+      from-pack: Keil::MDK-Middleware@8.1.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usb_lib_ver.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/USB/USB_Debug.h
+          category: header
+    - component: Keil::USB&MDK:Host:MSC@8.0.0
+      from-pack: Keil::MDK-Middleware@8.1.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usbh_lib_msc.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/USB/USBH_Config_MSC.h
+          category: header
+    - component: Keil::USB&MDK:Host@8.0.0
+      from-pack: Keil::MDK-Middleware@8.1.0
+      files:
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usbh_config.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usbh_debug.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usbh_lib_core.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usbh_lib_drv.c
+          category: sourceC
+        - file: C:/Users/u0081767/AppData/Local/Arm/Packs/Keil/MDK-Middleware/8.1.0/Components/USB/Source/usbh_lib_mem.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/RTE/USB/USBH_Config_0.h
+          category: header
     - component: Segger::Graphics&MDK-Pro:CORE@6.32.3
       from-pack: Keil::MDK-Middleware_Graphics@1.3.1
       files:
@@ -118,8 +197,12 @@ build-gen:
       from-pack: ARM::CMSIS@6.2.0
     - api: CMSIS Driver:USART(API)@2.4.0
       from-pack: ARM::CMSIS@6.2.0
+    - api: CMSIS Driver:USB Host(API)@2.4.0
+      from-pack: ARM::CMSIS@6.2.0
     - api: CMSIS Driver:VIO(API)@1.0.0
       from-pack: ARM::CMSIS@6.2.0
+    - api: CMSIS-Compiler:File Interface(API)@1.1.0
+      from-pack: ARM::CMSIS-Compiler@2.1.0
     - api: CMSIS-Compiler:STDERR(API)@1.1.0
       from-pack: ARM::CMSIS-Compiler@2.1.0
     - api: CMSIS-Compiler:STDIN(API)@1.1.0
@@ -148,4 +231,8 @@ build-gen:
         - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/LogViewerDLG.c
           category: sourceC
         - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/Touch_STMPE811.c
+          category: sourceC
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/USBH_MSC.h
+          category: header
+        - file: D:/cursussen/IoT-Systems/voorbereiding/20250806/STM32F429I-DISC1-APNT268-uvision/USBH_MSC.c
           category: sourceC

@@ -53,12 +53,30 @@
 #define RTE_CMSIS_Driver_USART21        /* Driver USART21 (LPUART1) */
 #define RTE_CMSIS_Driver_USART22        /* Driver USART22 (LPUART2) */
 #define RTE_CMSIS_Driver_USART23        /* Driver USART23 (LPUART3) */
+/* Keil::CMSIS Driver:USB Host@2.1.0 */
+#define RTE_Drivers_USBH0               /* Driver USBH0 */
+#define RTE_Drivers_USBH1               /* Driver USBH1 */
 /* Keil::CMSIS Driver:VIO:Board@1.0.0 */
 #define RTE_VIO_BOARD
 #define RTE_VIO_STM32F429I_DISC1
+/* Keil::CMSIS-Compiler:File Interface:MDK-MW File System@1.0.1 */
+#define RTE_CMSIS_Compiler_File_Interface        /* CMSIS-Compiler File Interface */
+#define RTE_CMSIS_Compiler_File_Interface_MDK_MW /* CMSIS-Compiler File Interface: MDK-Middleware File System */
 /* Keil::Device:CubeMX@1.0.0 */
 #define RTE_DEVICE_CUBE_MX
 #define CMSIS_device_header "stm32f4xx.h"
+/* Keil::File System&MDK:CORE@8.0.2 */
+#define RTE_FileSystem_Core             /* File System Core */
+/* Keil::File System&MDK:Drive:USB@8.0.2 */
+#define RTE_FileSystem_Drive_USB_0      /* File System USB Drive 0 */
+
+/* Keil::USB&MDK:CORE@8.0.0 */
+#define RTE_USB_Core                    /* USB Core */
+/* Keil::USB&MDK:Host:MSC@8.0.0 */
+#define RTE_USB_Host_MSC                /* USB Host MSC */
+/* Keil::USB&MDK:Host@8.0.0 */
+#define RTE_USB_Host_0                  /* USB Host 0 */
+
 /* Segger::Graphics&MDK-Pro:CORE@6.32.3 */
 #define RTE_Graphics_Core               /* Graphics Core */
 /* Segger::Graphics&MDK-Pro:Input Device:Touchscreen@6.32.3 */

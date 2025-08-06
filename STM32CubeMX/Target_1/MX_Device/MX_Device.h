@@ -1,6 +1,6 @@
 /******************************************************************************
  * File Name   : MX_Device.h
- * Date        : 06/08/2025 14:37:49
+ * Date        : 06/08/2025 20:56:59
  * Description : STM32Cube MX parameter definitions
  * Note        : This file is generated with a generator out of the
  *               STM32CubeMX project and its generated files (DO NOT EDIT!)
@@ -104,5 +104,42 @@
 #define MX_USART1_TX_GPIO_PuPd                  GPIO_NOPULL
 #define MX_USART1_TX_GPIO_Speed                 GPIO_SPEED_FREQ_VERY_HIGH
 #define MX_USART1_TX_GPIO_AF                    GPIO_AF7_USART1
+
+/*------------------------------ USB_OTG_HS     -----------------------------*/
+#define MX_USB_OTG_HS                           1
+
+/* Handle */
+#define MX_USB_OTG_HS_HANDLE                    hhcd_USB_OTG_HS
+
+/* Virtual mode */
+#define MX_USB_OTG_HS_VM                        Host_FS
+#define MX_USB_OTG_HS_Host_FS                   1
+
+/* Pins */
+
+/* USB_OTG_HS_DM */
+#define MX_USB_OTG_HS_DM_Pin                    PB14
+#define MX_USB_OTG_HS_DM_GPIO_Pin               GPIO_PIN_14
+#define MX_USB_OTG_HS_DM_GPIOx                  GPIOB
+#define MX_USB_OTG_HS_DM_GPIO_Mode              GPIO_MODE_AF_PP
+#define MX_USB_OTG_HS_DM_GPIO_PuPd              GPIO_NOPULL
+#define MX_USB_OTG_HS_DM_GPIO_Speed             GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_USB_OTG_HS_DM_GPIO_AF                GPIO_AF12_OTG_HS_FS
+
+/* USB_OTG_HS_DP */
+#define MX_USB_OTG_HS_DP_Pin                    PB15
+#define MX_USB_OTG_HS_DP_GPIO_Pin               GPIO_PIN_15
+#define MX_USB_OTG_HS_DP_GPIOx                  GPIOB
+#define MX_USB_OTG_HS_DP_GPIO_Mode              GPIO_MODE_AF_PP
+#define MX_USB_OTG_HS_DP_GPIO_PuPd              GPIO_NOPULL
+#define MX_USB_OTG_HS_DP_GPIO_Speed             GPIO_SPEED_FREQ_VERY_HIGH
+#define MX_USB_OTG_HS_DP_GPIO_AF                GPIO_AF12_OTG_HS_FS
+
+/* USB_OTG_HS_VBUS */
+#define MX_USB_OTG_HS_VBUS_Pin                  PB13
+#define MX_USB_OTG_HS_VBUS_GPIO_Pin             GPIO_PIN_13
+#define MX_USB_OTG_HS_VBUS_GPIOx                GPIOB
+#define MX_USB_OTG_HS_VBUS_GPIO_Mode            GPIO_MODE_INPUT
+#define MX_USB_OTG_HS_VBUS_GPIO_PuPd            GPIO_NOPULL
 
 #endif  /* MX_DEVICE_H__ */

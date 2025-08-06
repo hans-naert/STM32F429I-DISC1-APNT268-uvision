@@ -23,12 +23,13 @@
 
 #include "cmsis_os2.h"                  // ::CMSIS:RTOS2
 #include "cmsis_vio.h"
-#include "stm32f429i_discovery_sdram.h"
+#include "USBH_MSC.h"
 
 static osThreadId_t tid_thrLED;         // Thread id of thread: LED
 static osThreadId_t tid_thrButton;      // Thread id of thread: Button
 
 extern int Init_GUIThread (void);
+char fbuf[200] = { 0 };
 
 /*-----------------------------------------------------------------------------
   thrLED: blink LED
@@ -90,8 +91,23 @@ __NO_RETURN void app_main_thread (void *argument) {
 
   tid_thrLED = osThreadNew(thrLED, NULL, NULL);         // Create LED thread
   tid_thrButton = osThreadNew(thrButton, NULL, NULL);   // Create Button thread
+	
+	Init_GUIThread ();
+	USBH_Initialize(0);
 
   for (;;) {                            // Loop forever
+		static unsigned int result;
+		static FILE *f;
+		result = USBH_MSC_DriveMount ("U0:");
+    if (result == USBH_MSC_OK)  {
+      f = fopen ("Test.txt", "r");
+      if (f) {
+        fread (fbuf, sizeof (fbuf), 1, f);
+				printf("fbuf: %s\n",fbuf);
+        fclose (f);
+      }
+    }
+		osDelay (1000);
   }
 }
 
@@ -101,7 +117,6 @@ __NO_RETURN void app_main_thread (void *argument) {
 int app_main (void) {
   osKernelInitialize();                         /* Initialize CMSIS-RTOS2 */
   osThreadNew(app_main_thread, NULL, NULL);
-	Init_GUIThread ();
-  osKernelStart();                              /* Start thread execution */
+	osKernelStart();                              /* Start thread execution */
   return 0;
 }
